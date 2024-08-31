@@ -18,12 +18,25 @@ export default async function Home() {
         <nav className="flex w-full items-center justify-between py-8">
           <Image src={Logo} alt="Logo" height={24} className="cursor-pointer" />
           <ul className="flex items-center justify-evenly gap-8">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
             <li>
-              <Button>Contact</Button>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="flex min-w-[8rem] items-center justify-center bg-green p-2 font-bold text-black"
+              >
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
@@ -54,7 +67,7 @@ export default async function Home() {
         >
           <h2 className="text-2xl font-bold">About</h2>
           <Separator />
-          <div className="flex w-full items-center justify-between gap-10 py-10">
+          <div className="flex w-full items-center justify-between gap-10">
             <Image src={Photo2} alt="Profile image" width={500} />
             <div className="flex flex-col gap-3">
               <h3 className="text-xl">I&apos;m a Software Developer </h3>
