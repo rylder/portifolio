@@ -1,0 +1,66 @@
+{
+  "portuguese": [
+    {
+      "name": "Gerenciador de Etiquetas",
+      "description": "Desenvolvimento de um sistema completo para gestão de etiquetas e preços em uma rede de lojas.",
+      "image": "https://via.placeholder.com/150x100.png?text=Projeto+1",
+      "href": "/projetos/gerenciador-de-etiquetas"
+    },
+    {
+      "name": "Gerenciador de Produtos",
+      "description": "Desenvolvimento de um portal para gerenciamento de produtos na indústria gráfica.",
+      "image": "https://via.placeholder.com/150x100.png?text=Projeto+2",
+      "href": "/projetos/gerenciador-de-produtos"
+    },
+    {
+      "name": "Aplicativo Educacional",
+      "description": "Desenvolvimento de um aplicativo multiplataforma que utiliza Inteligência Artificial para auxiliar no aprendizado da matemática.",
+      "image": "https://via.placeholder.com/150x100.png?text=Projeto+3",
+      "href": "/projetos/aplicativo-educacional"
+    },
+    {
+      "name": "Aplicativo de Gerenciamento de Vendas",
+      "description": "Desenvolvimento de um aplicativo para tablets voltado para a gestão de vendas de automóveis.",
+      "image": "https://via.placeholder.com/150x100.png?text=Projeto+4",
+      "href": "/projetos/aplicativo-gerenciamento-vendas"
+    },
+    {
+      "name": "PDV para Máquinas de Cartão",
+      "description": "Desenvolvimento de um ponto de venda móvel para máquinas de cartão.",
+      "image": "https://via.placeholder.com/150x100.png?text=Projeto+5",
+      "href": "/projetos/pdv-maquinas-cartao"
+    }
+  ],
+  "english": [
+    {
+      "name": "Label Manager",
+      "description": "Development of a comprehensive system for managing labels and pricing across a network of stores.",
+      "image": "https://via.placeholder.com/150x100.png?text=Project+1",
+      "href": "/projects/label-manager"
+    },
+    {
+      "name": "Product Manager",
+      "description": "Development of a portal for product management in the printing industry.",
+      "image": "https://via.placeholder.com/150x100.png?text=Project+2",
+      "href": "/projects/product-manager"
+    },
+    {
+      "name": "Educational App",
+      "description": "Development of a cross-platform app utilizing Artificial Intelligence to assist in learning mathematics.",
+      "image": "https://via.placeholder.com/150x100.png?text=Project+3",
+      "href": "/projects/educational-app"
+    },
+    {
+      "name": "Sales Management App",
+      "description": "Development of a tablet app focused on managing automobile sales.",
+      "image": "https://via.placeholder.com/150x100.png?text=Project+4",
+      "href": "/projects/sales-management-app"
+    },
+    {
+      "name": "POS for Card Machines",
+      "description": "Development of a mobile point of sale system for card machines.",
+      "image": "https://via.placeholder.com/150x100.png?text=Project+5",
+      "href": "/projects/pos-card-machines"
+    }
+  ]
+}

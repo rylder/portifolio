@@ -1,67 +1,66 @@
 {
-    "portuguese": [
-      {
-        "name": "Apps Android",
-        "description": "Desenvolvimento e manutenção de apps Android nativos.",
-        "icon": "/icons/android.png"
-      },
-      {
-        "name": "Apps Multiplataforma",
-        "description": "Apps móveis com React Native para iOS e Android.",
-        "icon": "/icons/react.png"
-      },
-      {
-        "name": "Front-End Web",
-        "description": "Criação de interfaces web dinâmicas com Next.js.",
-        "icon": "/icons/frontend.png"
-      },
-      {
-        "name": "Liderança Técnica",
-        "description": "Coordenação de equipes técnicas para entregas ágeis.",
-        "icon": "/icons/leadership.png"
-      },
-      {
-        "name": "Arquitetura de Software",
-        "description": "Consultoria em arquiteturas eficientes para mobile e web.",
-        "icon": "/icons/arquitecture.png"
-      },
-      {
-        "name": "APIs Backend",
-        "description": "Integração e manutenção de APIs com Spring Boot.",
-        "icon": "/icons/backend.png"
-      }
-    ],
-    "english": [
-      {
-        "name": "Android Apps",
-        "description": "Development and maintenance of native Android apps.",
-        "icon": "/icons/android.png"
-      },
-      {
-        "name": "Cross-Platform Apps",
-        "description": "Mobile apps with React Native for iOS and Android.",
-        "icon": "/icons/react.png"
-      },
-      {
-        "name": "Front-End Web",
-        "description": "Building dynamic web interfaces with Next.js.",
-        "icon": "/icons/frontend.png"
-      },
-      {
-        "name": "Technical Leadership",
-        "description": "Coordinating technical teams for agile deliveries.",
-        "icon": "/icons/leadership.png"
-      },
-      {
-        "name": "Software Architecture",
-        "description": "Consulting on efficient architectures for mobile and web.",
-        "icon": "/icons/arquitecture.png"
-      },
-      {
-        "name": "Backend APIs",
-        "description": "Integration and maintenance of APIs with Spring Boot.",
-        "icon": "/icons/backend.png"
-      }
-    ]
-  }
-  
+  "portuguese": [
+    {
+      "name": "Apps Android",
+      "description": "Desenvolvimento e manutenção de apps Android nativos.",
+      "icon": "/icons/android.png"
+    },
+    {
+      "name": "Apps Multiplataforma",
+      "description": "Apps móveis com React Native para iOS e Android.",
+      "icon": "/icons/react.png"
+    },
+    {
+      "name": "Front-End Web",
+      "description": "Criação de interfaces web dinâmicas com Next.js.",
+      "icon": "/icons/frontend.png"
+    },
+    {
+      "name": "Liderança Técnica",
+      "description": "Coordenação de equipes técnicas para entregas ágeis.",
+      "icon": "/icons/leadership.png"
+    },
+    {
+      "name": "Arquitetura de Software",
+      "description": "Consultoria em arquiteturas eficientes para mobile e web.",
+      "icon": "/icons/arquitecture.png"
+    },
+    {
+      "name": "APIs Backend",
+      "description": "Integração e manutenção de APIs com Spring Boot.",
+      "icon": "/icons/backend.png"
+    }
+  ],
+  "english": [
+    {
+      "name": "Android Apps",
+      "description": "Development and maintenance of native Android apps.",
+      "icon": "/icons/android.png"
+    },
+    {
+      "name": "Cross-Platform Apps",
+      "description": "Mobile apps with React Native for iOS and Android.",
+      "icon": "/icons/react.png"
+    },
+    {
+      "name": "Front-End Web",
+      "description": "Building dynamic web interfaces with Next.js.",
+      "icon": "/icons/frontend.png"
+    },
+    {
+      "name": "Technical Leadership",
+      "description": "Coordinating technical teams for agile deliveries.",
+      "icon": "/icons/leadership.png"
+    },
+    {
+      "name": "Software Architecture",
+      "description": "Consulting on efficient architectures for mobile and web.",
+      "icon": "/icons/arquitecture.png"
+    },
+    {
+      "name": "Backend APIs",
+      "description": "Integration and maintenance of APIs with Spring Boot.",
+      "icon": "/icons/backend.png"
+    }
+  ]
+}

@@ -1,14 +1,17 @@
 import Button from "@/components/button";
 import Separator from "@/components/separator";
+import { ProjectsData } from "@/models/projects";
 import { ServicesData } from "@/models/services";
 import Image from "next/image";
 import Logo from "../../public/logo-rylder-oliveira.svg";
 import Photo2 from "../../public/photo-2-rylder-oliveira.svg";
 import Photo from "../../public/photo-rylder-oliveira.svg";
+import mockProjects from "../mock/projects.json";
 import mockServices from "../mock/services.json";
 
 export default async function Home() {
   const services: ServicesData = mockServices;
+  const projects: ProjectsData = mockProjects;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm">
@@ -99,7 +102,7 @@ export default async function Home() {
             the success of your projects.
           </p>
           <div className="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 md:grid-cols-3">
-            {services.portuguese.map((service, index) => (
+            {services.english.map((service, index) => (
               <div
                 key={index}
                 className="flex min-h-[240px] flex-col items-center justify-between rounded bg-gray p-5 shadow-lg shadow-[#1f1f1f]"
@@ -128,25 +131,26 @@ export default async function Home() {
             From mobile apps to web systems, I&apos;ve worked on projects for
             companies like Herval and Sinosserra. Check it out!
           </p>
-          <div className="grid grid-cols-3 gap-10 py-10">
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
+          <div className="flex flex-wrap items-center justify-center">
+            {projects.english.map((project, index) => (
+              <a
+                key={index}
+                href={project.href}
+                className="m-10 size-60 rounded-lg shadow-lg"
+                style={{
+                  backgroundImage: `url(${project.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-50 text-center text-white opacity-0 transition-opacity duration-300 hover:opacity-100">
+                  <div>
+                    <h3 className="mb-2 text-lg font-bold">{project.name}</h3>
+                    <p>{project.description}</p>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </section>
         <section
