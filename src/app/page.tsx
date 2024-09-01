@@ -1,9 +1,9 @@
 import Button from "@/components/button";
+import Navbar from "@/components/navbar";
 import Separator from "@/components/separator";
 import { ProjectsData } from "@/models/projects";
 import { ServicesData } from "@/models/services";
 import Image from "next/image";
-import Logo from "../../public/logo-rylder-oliveira.svg";
 import Photo2 from "../../public/photo-2-rylder-oliveira.svg";
 import Photo from "../../public/photo-rylder-oliveira.svg";
 import mockProjects from "../mock/projects.json";
@@ -15,34 +15,10 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm">
-        <nav className="flex w-full items-center justify-between py-8">
-          <Image src={Logo} alt="Logo" height={24} className="cursor-pointer" />
-          <ul className="flex items-center justify-evenly gap-8">
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="flex min-w-[8rem] items-center justify-center bg-green p-2 font-bold text-black"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
         <section
           id="home"
-          className="flex min-h-screen items-center justify-between gap-10 py-10"
+          className="flex min-h-screen items-center justify-between gap-10 p-10"
         >
           <div>
             <p>Hello, I&apos;m</p>
@@ -63,7 +39,7 @@ export default async function Home() {
         </section>
         <section
           id="about"
-          className="flex min-h-screen flex-col items-center justify-center"
+          className="flex min-h-screen flex-col items-center justify-center p-10"
         >
           <h2 className="text-2xl font-bold">About</h2>
           <Separator />
@@ -105,7 +81,7 @@ export default async function Home() {
         </section>
         <section
           id="services"
-          className="flex min-h-screen flex-col items-center justify-center"
+          className="flex min-h-screen flex-col items-center justify-center p-10"
         >
           <h2 className="text-2xl font-bold">Services</h2>
           <Separator />
@@ -136,7 +112,7 @@ export default async function Home() {
         </section>
         <section
           id="projects"
-          className="flex min-h-screen flex-col items-center justify-center"
+          className="flex min-h-screen flex-col items-center justify-center p-10"
         >
           <h2 className="text-2xl font-bold">Projects</h2>
           <Separator />
@@ -168,7 +144,7 @@ export default async function Home() {
         </section>
         <section
           id="contact"
-          className="flex min-h-screen flex-col items-center justify-center"
+          className="flex min-h-screen flex-col items-center justify-center p-10"
         >
           <h2 className="text-2xl font-bold">Contact</h2>
           <Separator />
