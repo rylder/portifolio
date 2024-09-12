@@ -33,9 +33,10 @@ export default function Navbar() {
       className={`fixed left-0 right-0 top-0 flex w-full items-center justify-center bg-gray bg-opacity-30 p-8 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="flex w-full max-w-5xl items-center justify-between md:px-8">
-        <Image src={Logo} alt="Logo" height={24} className="cursor-pointer" />
+        <a href="#home">
+          <Image src={Logo} alt="Logo" height={24} className="cursor-pointer" />
+        </a>
         <ul className="hidden items-center justify-evenly gap-8 md:flex">
-          <NavItem route="#home" label="Home" />
           <NavItem route="#about" label="About" />
           <NavItem route="#services" label="Services" />
           <NavItem route="#projects" label="Projects" />
@@ -50,8 +51,7 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && isVisible && (
-        <ul className="absolute left-0 right-0 top-full flex flex-col items-center bg-gray bg-opacity-30 py-4">
-          <NavItem route="#home" label="Home" onClick={toggleMobileMenu} />
+        <ul className="absolute left-0 right-0 top-full flex flex-col items-center gap-4 bg-gray bg-opacity-30 py-4">
           <NavItem route="#about" label="About" onClick={toggleMobileMenu} />
           <NavItem
             route="#services"
