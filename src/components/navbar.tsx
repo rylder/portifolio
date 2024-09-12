@@ -12,11 +12,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
+      const isScrollingUp = window.scrollY < lastScrollY;
+      setIsVisible(isScrollingUp);
       setLastScrollY(window.scrollY);
     };
 
@@ -35,7 +32,7 @@ export default function Navbar() {
     <nav
       className={`fixed left-0 right-0 top-0 flex w-full items-center justify-center bg-gray bg-opacity-30 p-8 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <div className="flex w-full max-w-5xl items-center justify-between">
+      <div className="flex w-full max-w-5xl items-center justify-between md:px-8">
         <Image src={Logo} alt="Logo" height={24} className="cursor-pointer" />
         <ul className="hidden items-center justify-evenly gap-8 md:flex">
           <NavItem route="#home" label="Home" />

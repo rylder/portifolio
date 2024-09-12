@@ -1,4 +1,5 @@
 import Button from "@/components/button";
+import SmallCard from "@/components/cards/small-card";
 import Navbar from "@/components/navbar";
 import Separator from "@/components/separator";
 import { ProjectsData } from "@/models/projects";
@@ -18,9 +19,9 @@ export default async function Home() {
         <Navbar />
         <section
           id="home"
-          className="flex min-h-screen items-center justify-between gap-10 p-10"
+          className="flex min-h-screen flex-col items-center justify-center gap-10 p-10 md:flex-row md:justify-between"
         >
-          <div>
+          <div className="flex w-full flex-col gap-3 md:w-1/2">
             <p>Hello, I&apos;m</p>
             <h1 className="py-2 text-4xl font-bold text-green">
               Rylder Oliveira
@@ -30,54 +31,51 @@ export default async function Home() {
               development. Explore my skills, services, and projects. Let’s
               build something amazing together!
             </p>
-            <div className="my-6 flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <Button>Download CV</Button>
               <Button variant="outline">Hire Me</Button>
             </div>
           </div>
-          <Image src={Photo} alt="Profile image" width={500} />
+          <div className="flex w-full justify-center md:w-1/2">
+            <Image
+              src={Photo}
+              alt="Profile image"
+              className="hidden w-full md:block md:w-1/2"
+            />
+          </div>
         </section>
         <section
           id="about"
-          className="flex min-h-screen flex-col items-center justify-center p-10"
+          className="flex min-h-screen flex-col items-center p-10"
         >
           <h2 className="text-2xl font-bold">About</h2>
           <Separator />
-          <div className="flex w-full items-center justify-between gap-10">
-            <Image src={Photo2} alt="Profile image" width={500} />
-            <div className="flex flex-col gap-3">
+          <div className="flex w-full flex-1 flex-col items-center justify-between gap-10 md:flex-row">
+            <Image
+              src={Photo2}
+              alt="Profile image"
+              className="hidden w-full md:block md:w-1/2"
+            />
+            <div className="just flex w-full flex-1 flex-col justify-center gap-3 py-10 md:w-1/2">
               <h3 className="text-xl">I&apos;m a Software Developer </h3>
-              <p className="max-w-sm">
+              <p>
                 experienced in Kotlin, Java, React Native, and Next.js.
                 Passionate about technology, I lead teams and deliver
                 high-quality solutions. Fluent in English and always ready for
                 new challenges.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <Button>Hire Me</Button>
                 <Button variant="outline">Contact</Button>
               </div>
             </div>
           </div>
-          <div className="flex gap-6 p-10">
-            <div className="flex flex-col items-center justify-center rounded border-[1px] border-white bg-gray px-12 py-6">
-              <h4 className="text-xl">40+</h4>
-              <p>Clients</p>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded border-[1px] border-white bg-gray px-12 py-6">
-              <h4 className="text-xl">40+</h4>
-              <p>Clients</p>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded border-[1px] border-white bg-gray px-12 py-6">
-              <h4 className="text-xl">40+</h4>
-              <p>Clients</p>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded border-[1px] border-white bg-gray px-12 py-6">
-              <h4 className="text-xl">40+</h4>
-              <p>Clients</p>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            <SmallCard title="40+" description="Clients" />
+            <SmallCard title="40+" description="Projects" />
+            <SmallCard title="40+" description="Years Experience" />
+            <SmallCard title="40+" description="Technologies" />
           </div>
-          <div></div>
         </section>
         <section
           id="services"
@@ -90,11 +88,11 @@ export default async function Home() {
             interfaces with Next.js. I also offer technical leadership to ensure
             the success of your projects.
           </p>
-          <div className="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 md:grid-cols-3">
+          <div className="flex flex-wrap items-center justify-center gap-10 py-10">
             {services.english.map((service, index) => (
               <div
                 key={index}
-                className="flex min-h-[240px] flex-col items-center justify-between rounded bg-gray p-5 shadow-lg shadow-[#1f1f1f]"
+                className="flex size-60 flex-col items-center justify-between rounded bg-gray p-5 shadow-lg shadow-[#1f1f1f]"
               >
                 <div className="flex flex-1 flex-col items-center justify-center">
                   <Image
@@ -144,14 +142,14 @@ export default async function Home() {
         </section>
         <section
           id="contact"
-          className="flex min-h-screen flex-col items-center justify-center p-10"
+          className="flex min-h-screen flex-col items-center p-10"
         >
           <h2 className="text-2xl font-bold">Contact</h2>
           <Separator />
           <p className="max-w-xl text-center">
             Want to discuss a project or exchange ideas? Contact me
           </p>
-          <div className="grid grid-cols-3 gap-10 py-10">
+          <div className="grid hidden grid-cols-3 gap-10 py-10">
             <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
               Imagem projeto
             </div>
