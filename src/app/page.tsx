@@ -36,13 +36,11 @@ export default async function Home() {
               <Button variant="outline">Hire Me</Button>
             </div>
           </div>
-          <div className="flex w-full justify-center md:w-1/2">
-            <Image
-              src={Photo}
-              alt="Profile image"
-              className="hidden w-full md:block md:w-1/2"
-            />
-          </div>
+          <Image
+            src={Photo}
+            alt="Profile image"
+            className="hidden w-full md:block md:w-1/2"
+          />
         </section>
         <section
           id="about"
