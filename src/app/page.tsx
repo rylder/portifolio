@@ -1,5 +1,6 @@
 import Button from "@/components/button";
-import SmallCard from "@/components/cards/small-card";
+import { Card } from "@/components/cards";
+import Carousel from "@/components/carousel";
 import Navbar from "@/components/navbar";
 import Separator from "@/components/separator";
 import { ProjectsData } from "@/models/projects";
@@ -68,11 +69,11 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <SmallCard title="40+" description="Clients" />
-            <SmallCard title="40+" description="Projects" />
-            <SmallCard title="40+" description="Years Experience" />
-            <SmallCard title="40+" description="Technologies" />
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Card.AboutCard title="40+" description="Clients" />
+            <Card.AboutCard title="40+" description="Projects" />
+            <Card.AboutCard title="40+" description="Years Experience" />
+            <Card.AboutCard title="40+" description="Technologies" />
           </div>
         </section>
         <section
@@ -86,25 +87,14 @@ export default async function Home() {
             interfaces with Next.js. I also offer technical leadership to ensure
             the success of your projects.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-10 py-10">
-            {services.english.map((service, index) => (
-              <div
-                key={index}
-                className="flex size-60 flex-col items-center justify-between rounded bg-gray p-5 shadow-lg shadow-[#1f1f1f]"
-              >
-                <div className="flex flex-1 flex-col items-center justify-center">
-                  <Image
-                    src={service.icon}
-                    alt="Icone"
-                    width={48}
-                    height={48}
-                  />
-                  <h3 className="mt-4 text-center text-xl">{service.name}</h3>
-                </div>
-                <p className="mt-4 text-center">{service.description}</p>
-              </div>
-            ))}
+          <div className="flex w-full flex-1 flex-col items-center justify-center">
+            <Carousel>
+              {services.english.map((service, index) => (
+                <Card.ServiceCard key={index} service={service} />
+              ))}
+            </Carousel>
           </div>
+          {/* <div className="flex flex-wrap items-center justify-center gap-6 py-10"></div> */}
         </section>
         <section
           id="projects"
@@ -118,23 +108,7 @@ export default async function Home() {
           </p>
           <div className="flex flex-wrap items-center justify-center">
             {projects.english.map((project, index) => (
-              // TODO: Add "a" tag to became a link to project page using href on project object
-              <div
-                key={index}
-                className="m-10 size-60 rounded-lg shadow-lg"
-                style={{
-                  backgroundImage: `url(${project.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-80 text-center text-white opacity-0 transition-opacity duration-300 hover:opacity-100">
-                  <div>
-                    <h3 className="mb-2 text-lg font-bold">{project.name}</h3>
-                    <p>{project.description}</p>
-                  </div>
-                </div>
-              </div>
+              <Card.ProjectCard key={index} project={project} />
             ))}
           </div>
         </section>
