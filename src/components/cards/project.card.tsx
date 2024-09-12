@@ -8,7 +8,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     // TODO: Add "a" tag to became a link to project page using href on project object
     <div
-      className="m-10 size-60 rounded-lg shadow-lg"
+      className="size-60 rounded-lg shadow-lg"
       style={{
         backgroundImage: `url(${project.image})`,
         backgroundSize: "cover",

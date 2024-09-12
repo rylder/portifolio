@@ -106,10 +106,12 @@ export default async function Home() {
             From mobile apps to web systems, I&apos;ve worked on projects for
             companies like Herval and Sinosserra. Check it out!
           </p>
-          <div className="flex flex-wrap items-center justify-center">
-            {projects.english.map((project, index) => (
-              <Card.ProjectCard key={index} project={project} />
-            ))}
+          <div className="flex flex-1 items-center justify-center">
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              {projects.english.map((project, index) => (
+                <Card.ProjectCard key={index} project={project} />
+              ))}
+            </div>
           </div>
         </section>
         <section
