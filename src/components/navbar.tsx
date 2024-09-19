@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import Image from "next/image";
 import { LiHTMLAttributes, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -30,7 +31,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 flex w-full items-center justify-center bg-gray bg-opacity-30 p-8 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      className={`fixed left-0 right-0 top-0 z-10 flex w-full items-center justify-center bg-gray bg-opacity-30 p-8 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="flex w-full max-w-5xl items-center justify-between md:px-8">
         <a href="#home">
@@ -78,19 +79,23 @@ export default function Navbar() {
 interface NavItemProps extends LiHTMLAttributes<HTMLLIElement> {
   route: string;
   label: string;
-  variant?: "primary";
+  variant?: "primary" | "default";
 }
 
-function NavItem({ route, label, variant, ...props }: NavItemProps) {
+function NavItem({
+  route,
+  label,
+  variant = "default",
+  ...props
+}: NavItemProps) {
+  const variantClass = clsx({
+    "flex min-w-[8rem] items-center justify-center bg-green p-2 font-bold text-black hover:bg-opacity-60 focus:bg-opacity-80":
+      variant === "primary",
+    "focus:opacity-80 hover:opacity-60": variant === "default",
+  });
   return (
     <li {...props}>
-      <a
-        href={route}
-        className={
-          variant &&
-          "flex min-w-[8rem] items-center justify-center bg-green p-2 font-bold text-black"
-        }
-      >
+      <a href={route} className={clsx(variantClass, props.className)}>
         {label}
       </a>
     </li>

@@ -1,6 +1,7 @@
 import Button from "@/components/button";
 import { Card } from "@/components/cards";
 import Carousel from "@/components/carousel";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { Section } from "@/components/sections";
 import Separator from "@/components/separator";
@@ -115,6 +116,11 @@ export default async function Home() {
           </div>
         </section>
         <Section.ContactSection id="contact" />
+        <Footer
+          github="https://github.com/rylder"
+          linkedin="https://www.linkedin.com/in/rylder-oliveira/"
+          twitterX="https://www.x.com/callmerylder"
+        />
       </div>
     </main>
   );
