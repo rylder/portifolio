@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     name: "Rylder Oliveira",
     url: "https://www.github.com/rylder",
   },
+  openGraph: {
+    siteName: "Rylder Oliveira",
+  },
   keywords: [
     "software developer",
     "developer",
