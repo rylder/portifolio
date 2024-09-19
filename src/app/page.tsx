@@ -2,6 +2,7 @@ import Button from "@/components/button";
 import { Card } from "@/components/cards";
 import Carousel from "@/components/carousel";
 import Navbar from "@/components/navbar";
+import { Section } from "@/components/sections";
 import Separator from "@/components/separator";
 import { ProjectsData } from "@/models/projects";
 import { ServicesData } from "@/models/services";
@@ -113,37 +114,7 @@ export default async function Home() {
             </Carousel>
           </div>
         </section>
-        <section
-          id="contact"
-          className="flex min-h-screen flex-col items-center p-10"
-        >
-          <h2 className="text-2xl font-bold">Contact</h2>
-          <Separator />
-          <p className="max-w-xl text-center">
-            Want to discuss a project or exchange ideas? Contact me
-          </p>
-          <div className="grid hidden grid-cols-3 gap-10 py-10">
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-            <div className="flex h-60 w-60 flex-col items-center justify-center rounded border-[1px] border-white bg-gray">
-              Imagem projeto
-            </div>
-          </div>
-        </section>
-        <footer className="py-10"></footer>
+        <Section.ContactSection id="contact" />
       </div>
     </main>
   );
