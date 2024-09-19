@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import { Button } from "@/components/buttons";
 import { Card } from "@/components/cards";
 import Carousel from "@/components/carousel";
 import Footer from "@/components/footer";
@@ -35,8 +35,8 @@ export default async function Home() {
               build something amazing together!
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button>Download CV</Button>
-              <Button variant="outline">Hire Me</Button>
+              <Button.DownloadButton />
+              <Button.HireMeButton />
             </div>
           </div>
           <Image
@@ -66,8 +66,7 @@ export default async function Home() {
                 new challenges.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button>Hire Me</Button>
-                <Button variant="outline">Contact</Button>
+                <Button.HireMeButton />
               </div>
             </div>
           </div>

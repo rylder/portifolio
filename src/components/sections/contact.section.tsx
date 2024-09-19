@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "../button";
+import Button from "../buttons/button";
 import Separator from "../separator";
 
 interface ContactSextionProps {
